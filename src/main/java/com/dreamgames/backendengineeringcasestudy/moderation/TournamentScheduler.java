@@ -14,12 +14,12 @@ public class TournamentScheduler {
     @Autowired
     private TournamentOrganizer tournamentOrganizer ;
 
-    @Scheduled(cron = "1 0 0 * * ?")
+    @Scheduled(cron = "0 0 0 * * ?")
     public void startTournament(){
         tournamentOrganizer.createTournament();
     }
 
-    @Scheduled(cron = "59 0 20 * * ?")
+    @Scheduled(cron = "0 0 20 * * ?")
     public void endTournament(){
         tournamentOrganizer.finishTournament();
     }
